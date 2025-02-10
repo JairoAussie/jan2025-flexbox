@@ -58,3 +58,33 @@ img {
         width: 200px;
     }
 }
+
+.parent-typing-effect{
+    display: flex;
+    margin-top: 50px;
+}
+
+.typing-effect {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 24px;
+    animation: cursor-blinking 1s infinite, change-width 3s steps(32,end) 1 ;
+}
+
+@keyframes cursor-blinking {
+    0% {
+        border-right: none;
+    }
+    50% {
+        border-right: 1px solid black;
+    }
+}
+
+@keyframes change-width {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%
+    }
+}
